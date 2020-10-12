@@ -24,3 +24,7 @@ kubectl rollout status daemonset -n knode-system knode-daemon
 curl -L https://github.com/juan-lee/knode/releases/download/v0.1.3/knode-tmpdir.yaml | kubectl apply -f -
 kubectl rollout status daemonset -n knode-system knode-daemon
 ```
+#### Reverting knode
+
+If you wish to revert the data-root changes back to the original location you can [update data-root](https://github.com/juan-lee/knode/releases/download/v0.1.2/knode-tmpdir.yaml) to point to `/var/lib/docker` and then kubectl apply.
+
